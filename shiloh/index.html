@@ -46,19 +46,25 @@ nav a.home{opacity:.7;font-size:12.5px;letter-spacing:.12em;text-transform:upper
 header.solid .menu{color:#2E3226}
 
 /* ---------- hero: full-viewport image, palette wash, slow zoom ---------- */
-.hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;
+.hero{position:relative;min-height:86vh;display:flex;align-items:center;justify-content:center;
  text-align:center;color:#F5F2DE;overflow:hidden;isolation:isolate}
 .hero .bg{position:absolute;inset:-4%;background-size:cover;background-position:center;
  z-index:-2;animation:kb 26s ease-in-out infinite alternate}
 @keyframes kb{from{transform:scale(1) translateY(0)}to{transform:scale(1.09) translateY(-1.5%)}}
 .hero::before{content:"";position:absolute;inset:0;z-index:-1;
  background:linear-gradient(rgba(0,0,0,.14),rgba(0,0,0,.14)),rgba(96,106,68,.55)}
-.hero .inner{max-width:1000px;padding:170px 34px 120px}
+.hero .inner{max-width:1000px;padding:150px 34px 110px}
 .hero.short .inner{padding-top:210px}
 .hero h1{font-family:'Playfair Display',serif;font-weight:700;
  font-size:clamp(38px,5.2vw,72px);line-height:1.18;text-shadow:0 3px 30px rgba(0,0,0,.25)}
 .hero p.sub{margin:30px auto 0;max-width:60ch;font-size:21px;font-weight:300;color:#FFFFFFDD}
-.hero.short{min-height:72vh}
+.hero.short{min-height:60vh}
+.hero::after{content:"";position:absolute;bottom:30px;left:50%;width:22px;height:22px;
+ border-right:2.5px solid rgba(255,255,255,.9);border-bottom:2.5px solid rgba(255,255,255,.9);
+ transform:translateX(-50%) rotate(45deg);animation:cue 2.1s ease-in-out infinite;z-index:3;
+ filter:drop-shadow(0 2px 6px rgba(0,0,0,.35))}
+@keyframes cue{0%,100%{transform:translate(-50%,0) rotate(45deg);opacity:.55}
+ 50%{transform:translate(-50%,12px) rotate(45deg);opacity:1}}
 
 /* ---------- buttons ---------- */
 .btn{display:inline-block;font-family:'Jost',sans-serif;font-weight:600;font-size:15px;
@@ -226,8 +232,8 @@ footer .fbot a{color:#FFFFFF80;text-decoration:none}
 <div class="hero"><div class="bg" style="background-image:url('assets/stock/gal1.jpg')"></div>
 <div class="inner rv in">
 <h1>A venue where every gathering funds the work.</h1>
-<p class="sub">An event space and a mentorship centre in one hand-built warehouse — book it for a
-wedding, an offsite or a supper, and the booking pays for the week that follows.</p>
+<p class="sub">An event space and a mentorship centre in one hand-built warehouse — every booking
+pays for the week that follows.</p>
 <div style="margin-top:44px"><a class="btn" href="book.html">Book Your Event</a>
 <a class="btn ghost" href="gather.html" style="margin-left:14px">See the Space</a></div>
 </div></div>
@@ -251,7 +257,7 @@ wedding, an offsite or a supper, and the booking pays for the week that follows.
 <div class="kick rv">What the building does</div>
 <h2 class="rv">Built plainly, so it can be used hard.</h2>
 <div class="feat">
-<div class="card rv d0"><div class="ico">🪑</div><h3>A room that changes shape</h3><p>Open plan and movable furniture — a class of twelve in the morning, a supper for a hundred that night.</p></div><div class="card rv d1"><div class="ico">🍽️</div><h3>Everything already here</h3><p>Tables, chairs and settings included. Nobody arrives with a van full of gear.</p></div><div class="card rv d2"><div class="ico">👩‍🍳</div><h3>Easy catering access</h3><p>Bring your caterer or bring the food; the layout makes either simple.</p></div><div class="card rv d0"><div class="ico">🌿</div><h3>Indoors and out</h3><p>Covered space and open ground, so a gathering is not trapped by weather or walls.</p></div><div class="card rv d1"><div class="ico">🎤</div><h3>Made for teaching</h3><p>Screens, sound and sightlines that let the person at the front actually be heard.</p></div><div class="card rv d2"><div class="ico">💛</div><h3>A venue with purpose</h3><p>Every booking funds the mentorship work that happens here the rest of the week.</p></div>
+<div class="card rv d0"><div class="ico">🪑</div><h3>A room that changes shape</h3><p>Twelve by morning, a hundred by night.</p></div><div class="card rv d1"><div class="ico">🍽️</div><h3>Everything already here</h3><p>Tables, chairs and settings included.</p></div><div class="card rv d2"><div class="ico">👩‍🍳</div><h3>Easy catering access</h3><p>Bring a caterer, or bring the food.</p></div><div class="card rv d0"><div class="ico">🌿</div><h3>Indoors and out</h3><p>Covered space and open ground.</p></div><div class="card rv d1"><div class="ico">🎤</div><h3>Made for teaching</h3><p>Screens, sound and clear sightlines.</p></div><div class="card rv d2"><div class="ico">💛</div><h3>A venue with purpose</h3><p>Every booking funds the mentoring.</p></div>
 </div></div></section>
 <div class="wave"><svg viewBox="0 0 1440 74" preserveAspectRatio="none"><path d="M0,30 C320,84 720,-14 1080,26 C1260,46 1380,40 1440,30 L1440,74 L0,74 Z" fill="#75805B"/></svg></div>
 
@@ -259,8 +265,6 @@ wedding, an offsite or a supper, and the booking pays for the week that follows.
 <div class="kick rv">Why it exists</div>
 <h2 class="rv" style="max-width:24ch;margin-left:auto;margin-right:auto">Small, strong and local
 beats large and far away.</h2>
-<p class="lede rv d1" style="margin-top:26px">Shiloh is one equipping station, in one town, for
-the young adults already in it. The venue is how it pays its own way.</p>
 <div class="stats">
 <div class="stat rv"><b>2,800</b><span>square feet, renovated by hand</span></div>
 <div class="stat rv d1"><b>3</b><span>phases — each funded before it starts</span></div>
@@ -274,7 +278,7 @@ the young adults already in it. The venue is how it pays its own way.</p>
 <div class="kick rv">Gather here</div>
 <h2 class="rv">One room, four kinds of day.</h2>
 <div class="feat two" style="text-align:left">
-<div class="imgcard rv d0"><div class="ph "><img src="assets/stock/gal1.jpg" alt="Weddings & receptions" loading="lazy"></div><div class="body"><h3>Weddings & receptions</h3><p>Warm timber, long tables and evening light — and a team that treats your day as the point, not an interruption.</p></div></div><div class="imgcard rv d1"><div class="ph "><img src="assets/stock/gal3.jpg" alt="Company offsites & retreats" loading="lazy"></div><div class="body"><h3>Company offsites & retreats</h3><p>Daylight, screens and sound, with lunch made simple.</p></div></div><div class="imgcard rv d0"><div class="ph "><img src="assets/stock/givehero.jpg" alt="Church & community" loading="lazy"></div><div class="body"><h3>Church & community</h3><p>Overflow services, midweek teaching, funerals and the meals that follow them.</p></div></div><div class="imgcard rv d1"><div class="ph "><img src="assets/stock/gal4.jpg" alt="Classes & cohorts" loading="lazy"></div><div class="body"><h3>Classes & cohorts</h3><p>The layout this building was designed around — small groups, long tables, someone teaching.</p></div></div>
+<div class="imgcard rv d0"><div class="ph "><img src="assets/stock/gal1.jpg" alt="Weddings & receptions" loading="lazy"></div><div class="body"><h3>Weddings & receptions</h3><p>Warm timber, long tables, evening light.</p></div></div><div class="imgcard rv d1"><div class="ph "><img src="assets/stock/gal3.jpg" alt="Company offsites & retreats" loading="lazy"></div><div class="body"><h3>Company offsites & retreats</h3><p>Daylight, screens and easy lunches.</p></div></div><div class="imgcard rv d0"><div class="ph "><img src="assets/stock/givehero.jpg" alt="Church & community" loading="lazy"></div><div class="body"><h3>Church & community</h3><p>Teaching, overflow and the meals after.</p></div></div><div class="imgcard rv d1"><div class="ph "><img src="assets/stock/gal4.jpg" alt="Classes & cohorts" loading="lazy"></div><div class="body"><h3>Classes & cohorts</h3><p>Small groups at long tables — the original design brief.</p></div></div>
 </div>
 <div style="margin-top:48px" class="rv"><a class="btn onlight" href="gather.html">Explore the
 Space</a></div>
@@ -291,9 +295,8 @@ Space</a></div>
 <div>
 <div class="kick rv">Where it stands</div>
 <h2 class="rv">Phase 2 is nearly finished.</h2>
-<p class="lede rv d1" style="margin-top:24px">The building is going up in stages, each one paid
-for before it begins. Phase 3 is scoped and costed — funding is the only thing setting its
-date.</p>
+<p class="lede rv d1" style="margin-top:24px">Each phase is paid for before it begins. Phase 3 is
+scoped — funding sets the date.</p>
 <div style="margin-top:34px" class="rv d2"><a class="btn onlight" href="build.html">Follow the
 Build</a></div>
 </div>

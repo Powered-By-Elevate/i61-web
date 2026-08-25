@@ -46,19 +46,25 @@ nav a.home{opacity:.7;font-size:12.5px;letter-spacing:.12em;text-transform:upper
 header.solid .menu{color:#2E3226}
 
 /* ---------- hero: full-viewport image, palette wash, slow zoom ---------- */
-.hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;
+.hero{position:relative;min-height:86vh;display:flex;align-items:center;justify-content:center;
  text-align:center;color:#F5F2DE;overflow:hidden;isolation:isolate}
 .hero .bg{position:absolute;inset:-4%;background-size:cover;background-position:center;
  z-index:-2;animation:kb 26s ease-in-out infinite alternate}
 @keyframes kb{from{transform:scale(1) translateY(0)}to{transform:scale(1.09) translateY(-1.5%)}}
 .hero::before{content:"";position:absolute;inset:0;z-index:-1;
  background:linear-gradient(rgba(0,0,0,.14),rgba(0,0,0,.14)),rgba(96,106,68,.55)}
-.hero .inner{max-width:1000px;padding:170px 34px 120px}
+.hero .inner{max-width:1000px;padding:150px 34px 110px}
 .hero.short .inner{padding-top:210px}
 .hero h1{font-family:'Playfair Display',serif;font-weight:700;
  font-size:clamp(38px,5.2vw,72px);line-height:1.18;text-shadow:0 3px 30px rgba(0,0,0,.25)}
 .hero p.sub{margin:30px auto 0;max-width:60ch;font-size:21px;font-weight:300;color:#FFFFFFDD}
-.hero.short{min-height:72vh}
+.hero.short{min-height:60vh}
+.hero::after{content:"";position:absolute;bottom:30px;left:50%;width:22px;height:22px;
+ border-right:2.5px solid rgba(255,255,255,.9);border-bottom:2.5px solid rgba(255,255,255,.9);
+ transform:translateX(-50%) rotate(45deg);animation:cue 2.1s ease-in-out infinite;z-index:3;
+ filter:drop-shadow(0 2px 6px rgba(0,0,0,.35))}
+@keyframes cue{0%,100%{transform:translate(-50%,0) rotate(45deg);opacity:.55}
+ 50%{transform:translate(-50%,12px) rotate(45deg);opacity:1}}
 
 /* ---------- buttons ---------- */
 .btn{display:inline-block;font-family:'Jost',sans-serif;font-weight:600;font-size:15px;
@@ -234,7 +240,7 @@ in the North Georgia foothills, minutes from downtown Dawsonville.</p>
 <div class="kick rv">Gather</div>
 <h2 class="rv">One room, booked four different ways.</h2>
 <div class="feat two" style="text-align:left">
-<div class="imgcard rv d0"><div class="ph "><img src="assets/stock/gal1.jpg" alt="Weddings & receptions" loading="lazy"></div><div class="body"><h3>Weddings & receptions</h3><p>Warm timber, long tables and evening light — and a team that treats your day as the point, not an interruption.</p></div></div><div class="imgcard rv d1"><div class="ph "><img src="assets/stock/gal3.jpg" alt="Company offsites & retreats" loading="lazy"></div><div class="body"><h3>Company offsites & retreats</h3><p>Daylight, screens and sound, with lunch made simple.</p></div></div><div class="imgcard rv d0"><div class="ph "><img src="assets/stock/givehero.jpg" alt="Church & community" loading="lazy"></div><div class="body"><h3>Church & community</h3><p>Overflow services, midweek teaching, funerals and the meals that follow them.</p></div></div><div class="imgcard rv d1"><div class="ph "><img src="assets/stock/gal4.jpg" alt="Classes & cohorts" loading="lazy"></div><div class="body"><h3>Classes & cohorts</h3><p>The layout this building was designed around — small groups, long tables, someone teaching.</p></div></div>
+<div class="imgcard rv d0"><div class="ph "><img src="assets/stock/gal1.jpg" alt="Weddings & receptions" loading="lazy"></div><div class="body"><h3>Weddings & receptions</h3><p>Warm timber, long tables, evening light.</p></div></div><div class="imgcard rv d1"><div class="ph "><img src="assets/stock/gal3.jpg" alt="Company offsites & retreats" loading="lazy"></div><div class="body"><h3>Company offsites & retreats</h3><p>Daylight, screens and easy lunches.</p></div></div><div class="imgcard rv d0"><div class="ph "><img src="assets/stock/givehero.jpg" alt="Church & community" loading="lazy"></div><div class="body"><h3>Church & community</h3><p>Teaching, overflow and the meals after.</p></div></div><div class="imgcard rv d1"><div class="ph "><img src="assets/stock/gal4.jpg" alt="Classes & cohorts" loading="lazy"></div><div class="body"><h3>Classes & cohorts</h3><p>Small groups at long tables — the original design brief.</p></div></div>
 </div></div></section>
 <div class="wave"><svg viewBox="0 0 1440 74" preserveAspectRatio="none"><path d="M0,30 C320,84 720,-14 1080,26 C1260,46 1380,40 1440,30 L1440,74 L0,74 Z" fill="#75805B"/></svg></div>
 

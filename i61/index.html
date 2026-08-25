@@ -46,19 +46,25 @@ nav a.home{opacity:.7;font-size:12.5px;letter-spacing:.12em;text-transform:upper
 header.solid .menu{color:#2A241B}
 
 /* ---------- hero: full-viewport image, palette wash, slow zoom ---------- */
-.hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;
+.hero{position:relative;min-height:86vh;display:flex;align-items:center;justify-content:center;
  text-align:center;color:#FBF7EE;overflow:hidden;isolation:isolate}
 .hero .bg{position:absolute;inset:-4%;background-size:cover;background-position:center;
  z-index:-2;animation:kb 26s ease-in-out infinite alternate}
 @keyframes kb{from{transform:scale(1) translateY(0)}to{transform:scale(1.09) translateY(-1.5%)}}
 .hero::before{content:"";position:absolute;inset:0;z-index:-1;
  background:linear-gradient(rgba(0,0,0,.14),rgba(0,0,0,.14)),rgba(126,95,44,.42)}
-.hero .inner{max-width:1000px;padding:170px 34px 120px}
+.hero .inner{max-width:1000px;padding:150px 34px 110px}
 .hero.short .inner{padding-top:210px}
 .hero h1{font-family:'Playfair Display',serif;font-weight:700;
  font-size:clamp(38px,5.2vw,72px);line-height:1.18;text-shadow:0 3px 30px rgba(0,0,0,.25)}
 .hero p.sub{margin:30px auto 0;max-width:60ch;font-size:21px;font-weight:300;color:#FFFFFFDD}
-.hero.short{min-height:72vh}
+.hero.short{min-height:60vh}
+.hero::after{content:"";position:absolute;bottom:30px;left:50%;width:22px;height:22px;
+ border-right:2.5px solid rgba(255,255,255,.9);border-bottom:2.5px solid rgba(255,255,255,.9);
+ transform:translateX(-50%) rotate(45deg);animation:cue 2.1s ease-in-out infinite;z-index:3;
+ filter:drop-shadow(0 2px 6px rgba(0,0,0,.35))}
+@keyframes cue{0%,100%{transform:translate(-50%,0) rotate(45deg);opacity:.55}
+ 50%{transform:translate(-50%,12px) rotate(45deg);opacity:1}}
 
 /* ---------- buttons ---------- */
 .btn{display:inline-block;font-family:'Jost',sans-serif;font-weight:600;font-size:15px;
@@ -234,9 +240,8 @@ body{background:#FBF7EE}
 <div class="hero"><div class="bg" style="background-image:url('assets/stock/bridge.jpg')"></div>
 <div class="inner rv in">
 <h1>We help the people who are already building.</h1>
-<p class="sub">Project i61 is an equipping mechanism for small, strong local initiatives — the
-bridge between people with a work in their hands and the resources, skills and friends that work
-needs.</p>
+<p class="sub">The bridge between people with a work in their hands and the resources, skills
+and friends that work needs.</p>
 <div style="margin-top:44px"><a class="btn" href="connect.html">Connect With Us</a>
 <a class="btn ghost" href="mission.html" style="margin-left:14px">Why We Exist</a></div>
 </div></div>
@@ -254,14 +259,11 @@ to build alone.</em></p>
 alongside.</h2>
 <div class="tl">
 <div class="step rv"><div class="num">01</div><h3>Find the builders</h3><p>Every town has people
-already doing the work — a teacher, a tradesman, a pastor with a warehouse and a vision. We look
-for them, not for markets.</p></div>
-<div class="step rv d1"><div class="num">02</div><h3>Come alongside</h3><p>Money is the least of
-it. Skills, tools, counsel, connections and stubborn friendship — whatever the work actually
-needs, for as long as it needs it.</p></div>
-<div class="step rv d2"><div class="num">03</div><h3>Stay small on purpose</h3><p>Relationships
-are the core of the mission. Small equipping stations change a town's culture; institutions
-mostly change their own org charts.</p></div>
+already doing the work. We look for them, not for markets.</p></div>
+<div class="step rv d1"><div class="num">02</div><h3>Come alongside</h3><p>Skills, tools, counsel
+and stubborn friendship — for as long as the work needs it.</p></div>
+<div class="step rv d2"><div class="num">03</div><h3>Stay small on purpose</h3><p>Small equipping
+stations change a town's culture. Institutions mostly change their org charts.</p></div>
 </div></div></section>
 <div class="wave"><svg viewBox="0 0 1440 74" preserveAspectRatio="none"><path d="M0,74 C480,0 960,0 1440,74 L1440,74 L0,74 Z" fill="#EFE6D2"/></svg></div>
 
@@ -270,14 +272,12 @@ mostly change their own org charts.</p></div>
 <h2 class="rv">Hands, tools and a long table.</h2>
 <div class="feat" style="text-align:left">
 <div class="imgcard rv"><div class="ph "><img src="assets/stock/work.jpg" alt="A trade taught by hand" loading="lazy"></div><div class="body">
-<h3>Skills</h3><p>A trade taught close-up, by someone who stays — carpentry to bookkeeping.</p>
+<h3>Skills</h3><p>A trade taught close-up, by someone who stays.</p>
 </div></div>
 <div class="imgcard rv d1"><div class="ph "><img src="assets/stock/hands.jpg" alt="Volunteers building together" loading="lazy"></div><div class="body">
-<h3>Sweat</h3><p>Crews, tools and materials showing up on the days a small work needs them
-most.</p></div></div>
+<h3>Sweat</h3><p>Crews and tools on the days they matter most.</p></div></div>
 <div class="imgcard rv d2"><div class="ph "><img src="assets/stock/table.jpg" alt="A shared meal" loading="lazy"></div><div class="body">
-<h3>Supper</h3><p>The unglamorous engine of every strong work: the same people, at the same
-table, weekly.</p></div></div>
+<h3>Supper</h3><p>The same people, at the same table, weekly.</p></div></div>
 </div></div></section>
 <div class="wave"><svg viewBox="0 0 1440 74" preserveAspectRatio="none"><path d="M0,74 C480,0 960,0 1440,74 L1440,74 L0,74 Z" fill="#FBF7EE"/></svg></div>
 
@@ -316,12 +316,9 @@ Visit Shiloh Collective</a></div>
 <div class="kick rv">How we carry ourselves</div>
 <h2 class="rv">Three habits, not a strategy.</h2>
 <div class="feat">
-<div class="card rv"><div class="ico">🏠</div><h3>Hospitality</h3><p>A stranger should feel
-expected. In every room we touch, that is a design decision before it is a value.</p></div>
-<div class="card rv d1"><div class="ico">🌾</div><h3>Gratitude</h3><p>We build like people who
-were handed something — because we were.</p></div>
-<div class="card rv d2"><div class="ico">🤲</div><h3>Generosity</h3><p>Capacity gets shared.
-What we help build belongs to its town, not to us.</p></div>
+<div class="card rv"><div class="ico">🏠</div><h3>Hospitality</h3><p>A stranger should feel expected.</p></div>
+<div class="card rv d1"><div class="ico">🌾</div><h3>Gratitude</h3><p>We build like people who were handed something.</p></div>
+<div class="card rv d2"><div class="ico">🤲</div><h3>Generosity</h3><p>What we help build belongs to its town.</p></div>
 </div></div></section>
 <div class="wave"><svg viewBox="0 0 1440 74" preserveAspectRatio="none"><path d="M0,74 C480,0 960,0 1440,74 L1440,74 L0,74 Z" fill="#EFE6D2"/></svg></div>
 
