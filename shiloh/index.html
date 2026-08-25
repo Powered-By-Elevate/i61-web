@@ -180,6 +180,47 @@ footer .fbot a{color:#FFFFFF80;text-decoration:none}
 
 
 
+
+/* ================= GALLERY SYSTEM — the image scaffold =================
+   Six grid shapes. Every tile is a named slot: swap the src, keep the layout.
+   Tight 6px gutters, edge-to-edge, no section padding — the Social House move. */
+.gal-wrap{position:relative}
+.mosaic,.duo,.quad,.wide2,.tall3,.band5{display:grid;gap:6px}
+.mosaic{grid-template-columns:repeat(4,1fr);grid-auto-rows:minmax(0,1fr)}
+.mosaic .ph{aspect-ratio:1/1}
+.mosaic .ph.hero2{grid-column:span 2;grid-row:span 2;aspect-ratio:auto}
+.mosaic .ph.wide{grid-column:span 2;aspect-ratio:2/1}
+.duo{grid-template-columns:1fr 1fr}
+.duo .ph{aspect-ratio:4/3}
+.quad{grid-template-columns:repeat(4,1fr)}
+.quad .ph{aspect-ratio:3/4}
+.wide2{grid-template-columns:2fr 1fr}
+.wide2 .ph{aspect-ratio:16/10}
+.wide2 .ph:last-child{aspect-ratio:auto}
+.tall3{grid-template-columns:repeat(3,1fr)}
+.tall3 .ph{aspect-ratio:3/4}
+.band5{grid-template-columns:repeat(5,1fr)}
+.band5 .ph{aspect-ratio:1/1}
+.solo{position:relative;height:74vh;overflow:hidden}
+.solo img{width:100%;height:100%;object-fit:cover;display:block}
+.solo .cap{position:absolute;left:0;right:0;bottom:0;padding:60px 44px 40px;
+ background:linear-gradient(transparent,rgba(0,0,0,.62));color:#fff}
+.solo .cap h3{font-size:clamp(22px,2.4vw,34px);margin:0}
+.solo .cap p{margin-top:8px;font-size:16px;opacity:.9;max-width:52ch}
+/* caption chip that rides a tile */
+.ph .tag{position:absolute;left:14px;bottom:14px;z-index:2;background:rgba(255,255,255,.94);
+ color:#2E3226;font-family:'Jost',sans-serif;font-weight:600;font-size:11px;letter-spacing:.14em;
+ text-transform:uppercase;padding:7px 13px;border-radius:20px;opacity:0;transform:translateY(8px);
+ transition:opacity .35s,transform .35s}
+.ph:hover .tag{opacity:1;transform:none}
+@media(max-width:900px){
+ .mosaic,.quad,.band5{grid-template-columns:repeat(2,1fr)}
+ .tall3{grid-template-columns:repeat(2,1fr)}
+ .wide2,.duo{grid-template-columns:1fr}
+ .mosaic .ph.hero2,.mosaic .ph.wide{grid-column:span 2;grid-row:auto;aspect-ratio:16/10}
+ .solo{height:56vh}
+}
+
 /* ---------- photo strip + intro statement ---------- */
 .strip3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
 .strip3 .ph{aspect-ratio:16/10}
@@ -237,21 +278,16 @@ pays for the week that follows.</p>
 <div style="margin-top:44px"><a class="btn" href="book.html">Book Your Event</a>
 <a class="btn ghost" href="gather.html" style="margin-left:14px">See the Space</a></div>
 </div></div>
-<div class="wave"><svg viewBox="0 0 1440 74" preserveAspectRatio="none"><path d="M0,30 C320,84 720,-14 1080,26 C1260,46 1380,40 1440,30 L1440,74 L0,74 Z" fill="#F5F2DE"/></svg></div>
+
+<div class="gal-wrap"><div class="mosaic rv"><div class="ph hero2"><img src="assets/stock/gal3.jpg" alt="Brick, steel and daylight" loading="lazy"><span class="tag">The main hall</span></div><div class="ph "><img src="assets/stock/v01.jpg" alt="Candlelit table setting" loading="lazy"><span class="tag">Set for supper</span></div><div class="ph "><img src="assets/stock/v02.jpg" alt="Flowers on the table" loading="lazy"><span class="tag">Flowers</span></div><div class="ph "><img src="assets/stock/gal5.jpg" alt="Bulbs strung over the beams" loading="lazy"><span class="tag">Evening</span></div><div class="ph "><img src="assets/stock/gal4.jpg" alt="Hands at the bench" loading="lazy"><span class="tag">The bench</span></div></div></div>
 
 <section class="tight on-cream center"><div class="wrap">
 <div class="kick rv">Welcome to Shiloh</div>
 <p class="intro rv">An intentionally hand-built venue in the North Georgia foothills — where
-<em>every gathering gives back</em> to the young adults being raised up in the same room.</p>
+<em>every gathering gives back</em> to the young adults raised up in the same room.</p>
 </div></section>
 
-<section class="tight on-cream flush" style="padding-top:0"><div class="collage">
-<div class="ph big rv"><img src="assets/stock/gal3.jpg" alt="Warm interior" loading="lazy"></div>
-<div class="ph rv d1"><img src="assets/stock/gal2.jpg" alt="Tables set for dinner" loading="lazy"></div>
-<div class="ph rv d2"><img src="assets/stock/gal4.jpg" alt="Hands at work" loading="lazy"></div>
-<div class="ph rv d1"><img src="assets/stock/gal5.jpg" alt="Evening lights" loading="lazy"></div>
-<div class="ph rv d2"><img src="assets/stock/givehero.jpg" alt="Community dinner" loading="lazy"></div>
-</div></section>
+<div class="gal-wrap"><div class="duo rv"><div class="ph "><img src="assets/stock/v03.jpg" alt="A wedding leaving the door" loading="lazy"><span class="tag">Weddings</span></div><div class="ph "><img src="assets/stock/v05.jpg" alt="A room full for an evening" loading="lazy"><span class="tag">Gatherings</span></div></div></div>
 
 <section class="on-cream"><div class="wrap center">
 <div class="kick rv">What the building does</div>
@@ -259,6 +295,8 @@ pays for the week that follows.</p>
 <div class="feat">
 <div class="card rv d0"><div class="ico">🪑</div><h3>A room that changes shape</h3><p>Twelve by morning, a hundred by night.</p></div><div class="card rv d1"><div class="ico">🍽️</div><h3>Everything already here</h3><p>Tables, chairs and settings included.</p></div><div class="card rv d2"><div class="ico">👩‍🍳</div><h3>Easy catering access</h3><p>Bring a caterer, or bring the food.</p></div><div class="card rv d0"><div class="ico">🌿</div><h3>Indoors and out</h3><p>Covered space and open ground.</p></div><div class="card rv d1"><div class="ico">🎤</div><h3>Made for teaching</h3><p>Screens, sound and clear sightlines.</p></div><div class="card rv d2"><div class="ico">💛</div><h3>A venue with purpose</h3><p>Every booking funds the mentoring.</p></div>
 </div></div></section>
+
+<div class="gal-wrap"><div class="band5 rv"><div class="ph "><img src="assets/stock/gal1.jpg" alt="The main hall dressed for a reception" loading="lazy"></div><div class="ph "><img src="assets/stock/gal2.jpg" alt="The long table, laid" loading="lazy"></div><div class="ph "><img src="assets/stock/givehero.jpg" alt="A community supper" loading="lazy"></div><div class="ph "><img src="assets/stock/v07.jpg" alt="String lights over the yard" loading="lazy"></div><div class="ph "><img src="assets/stock/gather.jpg" alt="The approach to the building" loading="lazy"></div></div></div>
 <div class="wave"><svg viewBox="0 0 1440 74" preserveAspectRatio="none"><path d="M0,30 C320,84 720,-14 1080,26 C1260,46 1380,40 1440,30 L1440,74 L0,74 Z" fill="#75805B"/></svg></div>
 
 <section class="on-primary"><div class="wrap center">
@@ -274,22 +312,14 @@ beats large and far away.</h2>
 </div></section>
 <div class="wave"><svg viewBox="0 0 1440 74" preserveAspectRatio="none"><path d="M0,30 C320,84 720,-14 1080,26 C1260,46 1380,40 1440,30 L1440,74 L0,74 Z" fill="#F5F2DE"/></svg></div>
 
-<section class="on-cream"><div class="wrap center">
+<section class="tight on-cream center"><div class="wrap">
 <div class="kick rv">Gather here</div>
 <h2 class="rv">One room, four kinds of day.</h2>
-<div class="feat two" style="text-align:left">
-<div class="imgcard rv d0"><div class="ph "><img src="assets/stock/gal1.jpg" alt="Weddings & receptions" loading="lazy"></div><div class="body"><h3>Weddings & receptions</h3><p>Warm timber, long tables, evening light.</p></div></div><div class="imgcard rv d1"><div class="ph "><img src="assets/stock/gal3.jpg" alt="Company offsites & retreats" loading="lazy"></div><div class="body"><h3>Company offsites & retreats</h3><p>Daylight, screens and easy lunches.</p></div></div><div class="imgcard rv d0"><div class="ph "><img src="assets/stock/givehero.jpg" alt="Church & community" loading="lazy"></div><div class="body"><h3>Church & community</h3><p>Teaching, overflow and the meals after.</p></div></div><div class="imgcard rv d1"><div class="ph "><img src="assets/stock/gal4.jpg" alt="Classes & cohorts" loading="lazy"></div><div class="body"><h3>Classes & cohorts</h3><p>Small groups at long tables — the original design brief.</p></div></div>
-</div>
-<div style="margin-top:48px" class="rv"><a class="btn onlight" href="gather.html">Explore the
-Space</a></div>
 </div></section>
 
-<div class="strip3">
-<div class="ph rv"><img src="assets/stock/gal1.jpg" alt="Reception under timber" loading="lazy"></div>
-<div class="ph rv d1"><img src="assets/stock/gather.jpg" alt="The approach" loading="lazy"></div>
-<div class="ph rv d2"><img src="assets/stock/gal5.jpg" alt="Evening lights" loading="lazy"></div>
-</div>
-<div class="wave" style="transform:scaleY(-1)"><svg viewBox="0 0 1440 74" preserveAspectRatio="none"><path d="M0,30 C320,84 720,-14 1080,26 C1260,46 1380,40 1440,30 L1440,74 L0,74 Z" fill="#F5F2DE"/></svg></div>
+<div class="gal-wrap"><div class="quad rv"><div class="ph "><img src="assets/stock/v03.jpg" alt="A wedding leaving the door" loading="lazy"><span class="tag">Weddings</span></div><div class="ph "><img src="assets/stock/gal3.jpg" alt="Brick, steel and daylight" loading="lazy"><span class="tag">Offsites</span></div><div class="ph "><img src="assets/stock/givehero.jpg" alt="A community supper" loading="lazy"><span class="tag">Church</span></div><div class="ph "><img src="assets/stock/gal4.jpg" alt="Hands at the bench" loading="lazy"><span class="tag">Cohorts</span></div></div></div>
+
+<div class="solo rv"><img src="assets/stock/gal5.jpg" alt="Evening in the hall" loading="lazy"><div class="cap"><h3 class="d">Evenings are the best argument</h3><p>Come at dusk with the lights on and the doors open. Most decisions get easy after that.</p></div></div>
 
 <section class="on-cream"><div class="wrap split">
 <div>
@@ -302,6 +332,8 @@ Build</a></div>
 </div>
 <div class="ph tall rv d1"><img src="assets/stock/buildwide.jpg" alt="Framing under construction" loading="lazy"></div>
 </div></section>
+
+<div class="gal-wrap"><div class="tall3 rv"><div class="ph "><img src="assets/stock/visitwide.jpg" alt="The North Georgia foothills" loading="lazy"><span class="tag">The foothills</span></div><div class="ph "><img src="assets/stock/mission.jpg" alt="A cohort outdoors" loading="lazy"><span class="tag">The cohort</span></div><div class="ph "><img src="assets/stock/buildwide.jpg" alt="Framing going up" loading="lazy"><span class="tag">The build</span></div></div></div>
 <div class="wave"><svg viewBox="0 0 1440 74" preserveAspectRatio="none"><path d="M0,30 C320,84 720,-14 1080,26 C1260,46 1380,40 1440,30 L1440,74 L0,74 Z" fill="#75805B"/></svg></div>
 
 <section class="on-primary"><div class="wrap center">
@@ -317,26 +349,12 @@ borrowed for them."</p><cite>Placeholder — replace with a real voice</cite></d
 <div class="q rv d1"><p>"You can tell the money goes somewhere. That mattered to us."</p>
 <cite>Placeholder — replace with a real voice</cite></div>
 </div></div></section>
-<div class="wave"><svg viewBox="0 0 1440 74" preserveAspectRatio="none"><path d="M0,30 C320,84 720,-14 1080,26 C1260,46 1380,40 1440,30 L1440,74 L0,74 Z" fill="#F5F2DE"/></svg></div>
 
-<section class="on-cream"><div class="wrap center">
-<div class="kick rv">Make a weekend of it</div>
-<h2 class="rv">The foothills come with the booking.</h2>
-<div class="feat">
-<div class="card rv"><div class="ico">🏛️</div><h3>Downtown Dawsonville</h3><p>The courthouse
-square, local eats and the Georgia Racing Hall of Fame.</p></div>
-<div class="card rv d1"><div class="ico">💦</div><h3>Amicalola Falls</h3><p>The tallest cascading
-waterfall in the Southeast — the southern gateway to the Appalachian Trail.</p></div>
-<div class="card rv d2"><div class="ico">🛍️</div><h3>Shops &amp; outlets</h3><p>North Georgia
-Premium Outlets and the GA-400 corridor, ten minutes south.</p></div>
-</div>
-<div style="margin-top:44px" class="rv"><a class="btn onlight" href="visit.html">Plan a
-Visit</a></div>
-</div></section>
+<div class="gal-wrap"><div class="wide2 rv"><div class="ph "><img src="assets/stock/gal1.jpg" alt="The main hall dressed for a reception" loading="lazy"><span class="tag">The hall</span></div><div class="ph "><img src="assets/stock/v02.jpg" alt="Flowers on the table" loading="lazy"><span class="tag">Details</span></div></div></div>
 
-<div class="fullph" style="background-image:url('assets/stock/gal5.jpg')"><div class="inner rv">
+<div class="fullph" style="background-image:url('assets/stock/gather.jpg')"><div class="inner rv">
 <h2>Ready to see it?</h2>
-<p>Come stand in the room. Most decisions get easy after that.</p>
+<p>Come stand in the room.</p>
 <div style="margin-top:40px"><a class="btn" href="book.html">Book Your Event</a>
 <a class="btn ghost" href="visit.html" style="margin-left:14px">Plan a Visit</a></div>
 </div></div>

@@ -1,7 +1,6 @@
 # Stock photo credits — TEMPORARY
 
-Creative Commons images via Openverse, stand-ins until Shiloh's own photography exists.
-**CC-BY / CC-BY-SA require this attribution wherever published.** Replace before launch.
+CC via Openverse (ND excluded). **All of these are placeholders for Runway-generated Shiloh/i61 imagery.** Attribution required until replaced.
 
 | File | Title | Creator | License | Source |
 |---|---|---|---|---|
@@ -15,3 +14,8 @@ Creative Commons images via Openverse, stand-ins until Shiloh's own photography 
 | `buildwide.jpg` | Bathroom | Jeremy Levine Design | CC BY 2.0 | https://www.flickr.com/photos/25186605@N04/3842978741 |
 | `visitwide.jpg` | Georgia Countryside | delta407 | CC BY-SA 2.0 | https://www.flickr.com/photos/39722486@N00/306737579 |
 | `givehero.jpg` | Mid-City Community Dinner | Editor B | CC BY 2.0 | https://www.flickr.com/photos/11018968@N00/4769514201 |
+| `v01.jpg` | Table Setting | Tracy Hunter | CC BY | https://www.flickr.com/photos/11121785@N00/133891501 |
+| `v02.jpg` | Wedding Bouquet | jerryfergusonphotography | CC BY | https://www.flickr.com/photos/17445097@N03/8633321435 |
+| `v03.jpg` | Adam & Emma Wedding | ^Joe | CC BY | https://www.flickr.com/photos/66239816@N08/14264510110 |
+| `v05.jpg` | Toasting the d.school | jurvetson | CC BY | https://www.flickr.com/photos/44124348109@N01/4587879709 |
+| `v07.jpg` | Path round the back of the Royal Pump Rooms, Leaming | ell brown | CC BY | https://www.flickr.com/photos/39415781@N06/6273776928 |
