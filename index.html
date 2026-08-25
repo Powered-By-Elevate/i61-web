@@ -1,19 +1,58 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Built to Lift</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#131315;color:#F4EFE6;font-family:Georgia,serif;min-height:100vh;
- display:flex;align-items:center;justify-content:center;text-align:center}
-.k{font-family:Helvetica,Arial,sans-serif;font-size:12px;letter-spacing:.3em;
- text-transform:uppercase;color:#C6A670}
-h1{font-weight:400;font-size:34px;margin:18px 0 34px}
-a{display:inline-block;margin:0 10px;padding:16px 34px;font-family:Helvetica,Arial,sans-serif;
- font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;text-decoration:none}
-.a{background:#C6A670;color:#131315}.b{color:#F4EFE6;box-shadow:inset 0 0 0 1px rgba(244,239,230,.5)}
-</style></head><body><div>
-<div class="k">Built to Lift</div>
-<h1>Two works, one mission.</h1>
-<a class="a" href="i61/index.html">Project i61</a>
-<a class="b" href="shiloh/index.html">Shiloh Collective</a>
-</div></body></html>
+body{font-family:'Jost',sans-serif;background:#0D0D0F;color:#F6F1E4;min-height:100vh;
+ overflow:hidden}
+.head{position:fixed;top:0;left:0;right:0;z-index:10;display:flex;align-items:center;
+ justify-content:center;gap:16px;padding:30px;pointer-events:none}
+.head img{width:52px;height:52px;filter:drop-shadow(0 3px 10px rgba(0,0,0,.5))}
+.head b{font-family:'Playfair Display',serif;font-size:20px;letter-spacing:.02em}
+.tag{position:fixed;bottom:26px;left:0;right:0;text-align:center;z-index:10;font-size:12px;
+ letter-spacing:.34em;text-transform:uppercase;color:#C6A670;pointer-events:none}
+.splits{display:flex;min-height:100vh}
+.half{position:relative;flex:1;display:flex;align-items:flex-end;justify-content:center;
+ text-decoration:none;color:#fff;overflow:hidden;transition:flex .7s cubic-bezier(.3,.7,.2,1)}
+.half:hover{flex:1.55}
+.half .bg{position:absolute;inset:0;background-size:cover;background-position:center;
+ transition:transform 1.2s ease;z-index:0}
+.half:hover .bg{transform:scale(1.07)}
+.half::before{content:"";position:absolute;inset:0;z-index:1;transition:background .5s}
+.half.i61::before{background:linear-gradient(rgba(19,19,21,.55),rgba(19,19,21,.78))}
+.half.sh::before{background:linear-gradient(rgba(96,106,68,.5),rgba(58,64,48,.8))}
+.half:hover::before{background:linear-gradient(rgba(0,0,0,.3),rgba(0,0,0,.65))}
+.half .card{position:relative;z-index:2;text-align:center;padding:0 40px 130px;max-width:460px}
+.half h2{font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(28px,3.4vw,46px);
+ line-height:1.15;text-shadow:0 3px 24px rgba(0,0,0,.4)}
+.half p{margin-top:14px;font-size:16.5px;color:#FFFFFFCC;font-weight:400}
+.half .go{display:inline-block;margin-top:26px;padding:14px 34px;border-radius:30px;
+ font-weight:600;font-size:13.5px;letter-spacing:.1em;text-transform:uppercase;
+ background:#C6A670;color:#131315;transition:transform .3s,background .3s}
+.half.sh .go{background:#F05A24;color:#fff}
+.half:hover .go{transform:translateY(-4px)}
+@media(max-width:820px){
+ body{overflow:auto}
+ .splits{flex-direction:column}
+ .half{min-height:50vh}
+ .half .card{padding-bottom:70px}
+}
+</style></head><body>
+<div class="head"><img src="i61/assets/seal.png" alt=""><b>Built to Lift</b></div>
+<div class="splits">
+<a class="half i61" href="i61/index.html">
+ <div class="bg" style="background-image:url('i61/assets/stock/bridge.jpg')"></div>
+ <div class="card"><h2>Project i61</h2>
+ <p>The equipping mechanism — helping the people who are already building.</p>
+ <span class="go">Enter</span></div></a>
+<a class="half sh" href="shiloh/index.html">
+ <div class="bg" style="background-image:url('shiloh/assets/stock/gal1.jpg')"></div>
+ <div class="card"><h2>Shiloh Collective</h2>
+ <p>The first connection project — an event venue and mentorship centre in Dawsonville, GA.</p>
+ <span class="go">Enter</span></div></a>
+</div>
+<div class="tag">Two works · one mission</div>
+</body></html>
