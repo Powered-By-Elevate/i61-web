@@ -173,6 +173,14 @@ footer .fbot a{color:#FFFFFF80;text-decoration:none}
 .btl{letter-spacing:.24em;text-transform:uppercase;font-weight:600;color:#B9873C}
 
 
+
+/* ---------- photo strip + intro statement ---------- */
+.strip3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.strip3 .ph{aspect-ratio:16/10}
+.intro{font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(24px,2.6vw,38px);
+ line-height:1.4;max-width:30ch;margin:0 auto}
+.intro em{font-style:italic;color:#B9873C}
+
 /* ---------- i61 editorial components ---------- */
 .marquee{overflow:hidden;white-space:nowrap;padding:26px 0;background:#B9873C}
 .marquee .track{display:inline-block;animation:mq 26s linear infinite}
@@ -192,8 +200,8 @@ footer .fbot a{color:#FFFFFF80;text-decoration:none}
  color:#B9873C;box-shadow:0 8px 26px rgba(0,0,0,.1)}
 .pull{position:relative;font-family:'Playfair Display',serif;font-style:italic;font-weight:600;
  font-size:clamp(26px,3.2vw,44px);line-height:1.4;max-width:26ch;margin:0 auto;padding-top:64px}
-.pull::before{content:"C";position:absolute;top:-34px;left:50%;transform:translateX(-50%);
- font-size:150px;line-height:1;font-style:normal;color:#B9873C;opacity:.16;
+.pull::before{content:"C";position:absolute;top:0;left:50%;transform:translateX(-50%);
+ font-size:130px;line-height:.8;font-style:normal;color:#B9873C;opacity:.18;
  font-family:'Playfair Display',serif;pointer-events:none}
 
 /* ---------- reveal animation ---------- */
@@ -234,7 +242,13 @@ needs.</p>
 </div></div>
 <div class="marquee"><div class="track"><span>Built to Lift</span><span>✦</span><span>Come Alongside</span><span>✦</span><span>Stay Small on Purpose</span><span>✦</span><span>Isaiah 61</span><span>✦</span><span>Built to Lift</span><span>✦</span><span>Come Alongside</span><span>✦</span><span>Stay Small on Purpose</span><span>✦</span><span>Isaiah 61</span><span>✦</span></div></div>
 
-<section class="on-cream"><div class="wrap center">
+<section class="tight on-cream center"><div class="wrap">
+<div class="kick rv">Project i61</div>
+<p class="intro rv">Every town already has its builders. We exist so that <em>none of them have
+to build alone.</em></p>
+</div></section>
+
+<section class="on-cream" style="padding-top:40px"><div class="wrap center">
 <div class="kick rv">The model</div>
 <h2 class="rv" style="max-width:26ch;margin:0 auto">We don't build our own centres. We come
 alongside.</h2>
@@ -252,6 +266,22 @@ mostly change their own org charts.</p></div>
 <div class="wave"><svg viewBox="0 0 1440 74" preserveAspectRatio="none"><path d="M0,74 C480,0 960,0 1440,74 L1440,74 L0,74 Z" fill="#EFE6D2"/></svg></div>
 
 <section class="on-primary"><div class="wrap center">
+<div class="kick rv">What coming alongside looks like</div>
+<h2 class="rv">Hands, tools and a long table.</h2>
+<div class="feat" style="text-align:left">
+<div class="imgcard rv"><div class="ph "><img src="assets/stock/work.jpg" alt="A trade taught by hand" loading="lazy"></div><div class="body">
+<h3>Skills</h3><p>A trade taught close-up, by someone who stays — carpentry to bookkeeping.</p>
+</div></div>
+<div class="imgcard rv d1"><div class="ph "><img src="assets/stock/hands.jpg" alt="Volunteers building together" loading="lazy"></div><div class="body">
+<h3>Sweat</h3><p>Crews, tools and materials showing up on the days a small work needs them
+most.</p></div></div>
+<div class="imgcard rv d2"><div class="ph "><img src="assets/stock/table.jpg" alt="A shared meal" loading="lazy"></div><div class="body">
+<h3>Supper</h3><p>The unglamorous engine of every strong work: the same people, at the same
+table, weekly.</p></div></div>
+</div></div></section>
+<div class="wave"><svg viewBox="0 0 1440 74" preserveAspectRatio="none"><path d="M0,74 C480,0 960,0 1440,74 L1440,74 L0,74 Z" fill="#FBF7EE"/></svg></div>
+
+<section class="on-cream"><div class="wrap center">
 <div class="kick rv">The name</div>
 <p class="pull rv">&hellip; that they may be called oaks of righteousness, the planting of the
 Lord.</p>
@@ -259,24 +289,30 @@ Lord.</p>
 and do it by raising up the people who live there. The oak on our seal grows above the line and
 roots below it: what holds is what nobody sees.</p>
 </div></section>
-<div class="wave"><svg viewBox="0 0 1440 74" preserveAspectRatio="none"><path d="M0,74 C480,0 960,0 1440,74 L1440,74 L0,74 Z" fill="#FBF7EE"/></svg></div>
 
-<section class="on-cream"><div class="wrap split">
+<div class="strip3">
+<div class="ph rv"><img src="assets/stock/land.jpg" alt="North Georgia country" loading="lazy"></div>
+<div class="ph rv d1"><img src="assets/stock/bridge.jpg" alt="The footbridge" loading="lazy"></div>
+<div class="ph rv d2"><img src="assets/stock/hands.jpg" alt="Raising the build" loading="lazy"></div>
+</div>
+<div class="wave" style="transform:scaleY(-1)"><svg viewBox="0 0 1440 74" preserveAspectRatio="none"><path d="M0,74 C480,0 960,0 1440,74 L1440,74 L0,74 Z" fill="#EFE6D2"/></svg></div>
+
+<section class="on-primary"><div class="wrap split">
 <div>
 <div class="kick rv">First connection project</div>
 <h2 class="rv">Shiloh Collective, Dawsonville.</h2>
 <p class="lede rv d1" style="margin-top:24px">An equipping centre for young adults, built by hand
 inside a 2,800 square foot warehouse — led by the people of Transforming Truth Ministries. i61
 does not run it. We come alongside the people who do.</p>
-<div style="margin-top:34px" class="rv d2"><a class="btn onlight" href="../shiloh/index.html">
+<div style="margin-top:34px" class="rv d2"><a class="btn" href="../shiloh/index.html">
 Visit Shiloh Collective</a></div>
 </div>
 <div class="arch rv d1"><div class="ph" style="aspect-ratio:3/3.8">
 <img src="assets/stock/hands.jpg" alt="Volunteers building together" loading="lazy"></div></div>
 </div></section>
-<div class="wave"><svg viewBox="0 0 1440 74" preserveAspectRatio="none"><path d="M0,74 C480,0 960,0 1440,74 L1440,74 L0,74 Z" fill="#EFE6D2"/></svg></div>
+<div class="wave"><svg viewBox="0 0 1440 74" preserveAspectRatio="none"><path d="M0,74 C480,0 960,0 1440,74 L1440,74 L0,74 Z" fill="#FBF7EE"/></svg></div>
 
-<section class="on-primary"><div class="wrap center">
+<section class="on-cream"><div class="wrap center">
 <div class="kick rv">How we carry ourselves</div>
 <h2 class="rv">Three habits, not a strategy.</h2>
 <div class="feat">
@@ -287,11 +323,26 @@ were handed something — because we were.</p></div>
 <div class="card rv d2"><div class="ico">🤲</div><h3>Generosity</h3><p>Capacity gets shared.
 What we help build belongs to its town, not to us.</p></div>
 </div></div></section>
+<div class="wave"><svg viewBox="0 0 1440 74" preserveAspectRatio="none"><path d="M0,74 C480,0 960,0 1440,74 L1440,74 L0,74 Z" fill="#EFE6D2"/></svg></div>
 
-<div class="fullph" style="background-image:url('assets/stock/table.jpg');min-height:58vh"><div class="inner rv">
-<h2>Building something in your town?</h2>
-<p>Tell us about it. The next connection project starts with a conversation, not an
+<section class="on-primary"><div class="wrap center">
+<div class="kick rv">The family</div>
+<h2 class="rv">Two works today. Room at the table for the next.</h2>
+<div class="feat two" style="text-align:left;margin-top:56px">
+<div class="imgcard rv"><div class="ph "><img src="assets/stock/hands.jpg" alt="Shiloh Collective" loading="lazy"></div><div class="body">
+<h3>Shiloh Collective</h3><p>Live in Dawsonville, Georgia — Phase 2 nearly complete.</p>
+<a href="../shiloh/index.html" class="btn onlight" style="margin-top:16px;padding:13px 28px">
+Visit</a></div></div>
+<div class="imgcard rv d1"><div class="ph "><img src="assets/stock/land.jpg" alt="Your town" loading="lazy"></div><div class="body">
+<h3>Your town?</h3><p>The next connection project starts with a conversation, not an
 application.</p>
+<a href="connect.html" class="btn onlight" style="margin-top:16px;padding:13px 28px">Start
+Talking</a></div></div>
+</div></div></section>
+
+<div class="fullph" style="background-image:url('assets/stock/land.jpg');min-height:58vh"><div class="inner rv">
+<h2>Building something in your town?</h2>
+<p>Tell us about it. We would like to hear what is already in your hands.</p>
 <div style="margin-top:38px"><a class="btn" href="connect.html">Start the Conversation</a></div>
 </div></div>
 

@@ -173,6 +173,14 @@ footer .fbot a{color:#FFFFFF80;text-decoration:none}
 .btl{letter-spacing:.24em;text-transform:uppercase;font-weight:600;color:#FFB38F}
 
 
+
+/* ---------- photo strip + intro statement ---------- */
+.strip3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.strip3 .ph{aspect-ratio:16/10}
+.intro{font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(24px,2.6vw,38px);
+ line-height:1.4;max-width:30ch;margin:0 auto}
+.intro em{font-style:italic;color:#F05A24}
+
 /* ---------- i61 editorial components ---------- */
 .marquee{overflow:hidden;white-space:nowrap;padding:26px 0;background:#F05A24}
 .marquee .track{display:inline-block;animation:mq 26s linear infinite}
@@ -192,8 +200,8 @@ footer .fbot a{color:#FFFFFF80;text-decoration:none}
  color:#F05A24;box-shadow:0 8px 26px rgba(0,0,0,.1)}
 .pull{position:relative;font-family:'Playfair Display',serif;font-style:italic;font-weight:600;
  font-size:clamp(26px,3.2vw,44px);line-height:1.4;max-width:26ch;margin:0 auto;padding-top:64px}
-.pull::before{content:"C";position:absolute;top:-34px;left:50%;transform:translateX(-50%);
- font-size:150px;line-height:1;font-style:normal;color:#F05A24;opacity:.16;
+.pull::before{content:"C";position:absolute;top:0;left:50%;transform:translateX(-50%);
+ font-size:130px;line-height:.8;font-style:normal;color:#F05A24;opacity:.18;
  font-family:'Playfair Display',serif;pointer-events:none}
 
 /* ---------- reveal animation ---------- */
@@ -224,6 +232,12 @@ wedding, an offsite or a supper, and the booking pays for the week that follows.
 <a class="btn ghost" href="gather.html" style="margin-left:14px">See the Space</a></div>
 </div></div>
 <div class="wave"><svg viewBox="0 0 1440 74" preserveAspectRatio="none"><path d="M0,30 C320,84 720,-14 1080,26 C1260,46 1380,40 1440,30 L1440,74 L0,74 Z" fill="#F5F2DE"/></svg></div>
+
+<section class="tight on-cream center"><div class="wrap">
+<div class="kick rv">Welcome to Shiloh</div>
+<p class="intro rv">An intentionally hand-built venue in the North Georgia foothills — where
+<em>every gathering gives back</em> to the young adults being raised up in the same room.</p>
+</div></section>
 
 <section class="tight on-cream flush" style="padding-top:0"><div class="collage">
 <div class="ph big rv"><img src="assets/stock/gal3.jpg" alt="Warm interior" loading="lazy"></div>
@@ -256,6 +270,23 @@ the young adults already in it. The venue is how it pays its own way.</p>
 </div></section>
 <div class="wave"><svg viewBox="0 0 1440 74" preserveAspectRatio="none"><path d="M0,30 C320,84 720,-14 1080,26 C1260,46 1380,40 1440,30 L1440,74 L0,74 Z" fill="#F5F2DE"/></svg></div>
 
+<section class="on-cream"><div class="wrap center">
+<div class="kick rv">Gather here</div>
+<h2 class="rv">One room, four kinds of day.</h2>
+<div class="feat two" style="text-align:left">
+<div class="imgcard rv d0"><div class="ph "><img src="assets/stock/gal1.jpg" alt="Weddings & receptions" loading="lazy"></div><div class="body"><h3>Weddings & receptions</h3><p>Warm timber, long tables and evening light — and a team that treats your day as the point, not an interruption.</p></div></div><div class="imgcard rv d1"><div class="ph "><img src="assets/stock/gal3.jpg" alt="Company offsites & retreats" loading="lazy"></div><div class="body"><h3>Company offsites & retreats</h3><p>Daylight, screens and sound, with lunch made simple.</p></div></div><div class="imgcard rv d0"><div class="ph "><img src="assets/stock/givehero.jpg" alt="Church & community" loading="lazy"></div><div class="body"><h3>Church & community</h3><p>Overflow services, midweek teaching, funerals and the meals that follow them.</p></div></div><div class="imgcard rv d1"><div class="ph "><img src="assets/stock/gal4.jpg" alt="Classes & cohorts" loading="lazy"></div><div class="body"><h3>Classes & cohorts</h3><p>The layout this building was designed around — small groups, long tables, someone teaching.</p></div></div>
+</div>
+<div style="margin-top:48px" class="rv"><a class="btn onlight" href="gather.html">Explore the
+Space</a></div>
+</div></section>
+
+<div class="strip3">
+<div class="ph rv"><img src="assets/stock/gal1.jpg" alt="Reception under timber" loading="lazy"></div>
+<div class="ph rv d1"><img src="assets/stock/gather.jpg" alt="The approach" loading="lazy"></div>
+<div class="ph rv d2"><img src="assets/stock/gal5.jpg" alt="Evening lights" loading="lazy"></div>
+</div>
+<div class="wave" style="transform:scaleY(-1)"><svg viewBox="0 0 1440 74" preserveAspectRatio="none"><path d="M0,30 C320,84 720,-14 1080,26 C1260,46 1380,40 1440,30 L1440,74 L0,74 Z" fill="#F5F2DE"/></svg></div>
+
 <section class="on-cream"><div class="wrap split">
 <div>
 <div class="kick rv">Where it stands</div>
@@ -267,6 +298,37 @@ date.</p>
 Build</a></div>
 </div>
 <div class="ph tall rv d1"><img src="assets/stock/buildwide.jpg" alt="Framing under construction" loading="lazy"></div>
+</div></section>
+<div class="wave"><svg viewBox="0 0 1440 74" preserveAspectRatio="none"><path d="M0,30 C320,84 720,-14 1080,26 C1260,46 1380,40 1440,30 L1440,74 L0,74 Z" fill="#75805B"/></svg></div>
+
+<section class="on-primary"><div class="wrap center">
+<div class="kick rv">In their words</div>
+<h2 class="rv">What people say after a day here.</h2>
+<div class="qs" style="text-align:left">
+<div class="q rv"><p>"The room did three different things in one weekend and never felt like it
+was straining."</p><cite>Placeholder — replace with a real voice</cite></div>
+<div class="q rv d1"><p>"We turned up with the food and nothing else. Everything we needed was
+already in the building."</p><cite>Placeholder — replace with a real voice</cite></div>
+<div class="q rv"><p>"The first place round here that felt built for young people rather than
+borrowed for them."</p><cite>Placeholder — replace with a real voice</cite></div>
+<div class="q rv d1"><p>"You can tell the money goes somewhere. That mattered to us."</p>
+<cite>Placeholder — replace with a real voice</cite></div>
+</div></div></section>
+<div class="wave"><svg viewBox="0 0 1440 74" preserveAspectRatio="none"><path d="M0,30 C320,84 720,-14 1080,26 C1260,46 1380,40 1440,30 L1440,74 L0,74 Z" fill="#F5F2DE"/></svg></div>
+
+<section class="on-cream"><div class="wrap center">
+<div class="kick rv">Make a weekend of it</div>
+<h2 class="rv">The foothills come with the booking.</h2>
+<div class="feat">
+<div class="card rv"><div class="ico">🏛️</div><h3>Downtown Dawsonville</h3><p>The courthouse
+square, local eats and the Georgia Racing Hall of Fame.</p></div>
+<div class="card rv d1"><div class="ico">💦</div><h3>Amicalola Falls</h3><p>The tallest cascading
+waterfall in the Southeast — the southern gateway to the Appalachian Trail.</p></div>
+<div class="card rv d2"><div class="ico">🛍️</div><h3>Shops &amp; outlets</h3><p>North Georgia
+Premium Outlets and the GA-400 corridor, ten minutes south.</p></div>
+</div>
+<div style="margin-top:44px" class="rv"><a class="btn onlight" href="visit.html">Plan a
+Visit</a></div>
 </div></section>
 
 <div class="fullph" style="background-image:url('assets/stock/gal5.jpg')"><div class="inner rv">

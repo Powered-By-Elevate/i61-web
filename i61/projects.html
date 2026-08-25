@@ -173,6 +173,14 @@ footer .fbot a{color:#FFFFFF80;text-decoration:none}
 .btl{letter-spacing:.24em;text-transform:uppercase;font-weight:600;color:#B9873C}
 
 
+
+/* ---------- photo strip + intro statement ---------- */
+.strip3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.strip3 .ph{aspect-ratio:16/10}
+.intro{font-family:'Playfair Display',serif;font-weight:700;font-size:clamp(24px,2.6vw,38px);
+ line-height:1.4;max-width:30ch;margin:0 auto}
+.intro em{font-style:italic;color:#B9873C}
+
 /* ---------- i61 editorial components ---------- */
 .marquee{overflow:hidden;white-space:nowrap;padding:26px 0;background:#B9873C}
 .marquee .track{display:inline-block;animation:mq 26s linear infinite}
@@ -192,8 +200,8 @@ footer .fbot a{color:#FFFFFF80;text-decoration:none}
  color:#B9873C;box-shadow:0 8px 26px rgba(0,0,0,.1)}
 .pull{position:relative;font-family:'Playfair Display',serif;font-style:italic;font-weight:600;
  font-size:clamp(26px,3.2vw,44px);line-height:1.4;max-width:26ch;margin:0 auto;padding-top:64px}
-.pull::before{content:"C";position:absolute;top:-34px;left:50%;transform:translateX(-50%);
- font-size:150px;line-height:1;font-style:normal;color:#B9873C;opacity:.16;
+.pull::before{content:"C";position:absolute;top:0;left:50%;transform:translateX(-50%);
+ font-size:130px;line-height:.8;font-style:normal;color:#B9873C;opacity:.18;
  font-family:'Playfair Display',serif;pointer-events:none}
 
 /* ---------- reveal animation ---------- */
@@ -223,7 +231,7 @@ body{background:#FBF7EE}
 <nav><ul><li><a class="home" href="../index.html">Built to Lift</a></li><li><a href="index.html">Home</a></li><li><a href="mission.html">Mission</a></li><li><a href="projects.html" class="on">Projects</a></li><li><a href="connect.html" class="cta">Connect</a></li></ul></nav><button class="menu" aria-label="Menu">&#9776;</button>
 </div></header>
 
-<div class="hero short"><div class="bg" style="background-image:url('assets/stock/table.jpg')"></div>
+<div class="hero short"><div class="bg" style="background-image:url('assets/stock/hands.jpg')"></div>
 <div class="inner rv in"><h1>One at a time, done properly.</h1>
 <p class="sub">We would rather serve one work well than badge twenty. A connection project is a
 long commitment to people, not a line in an annual report.</p></div></div>
