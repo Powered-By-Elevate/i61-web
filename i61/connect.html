@@ -1,0 +1,156 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Connect · Project i61</title><meta name="description" content="Start a conversation with Project i61 — builders, partners, givers.">
+<style>
+*{margin:0;padding:0;box-sizing:border-box} html{scroll-behavior:smooth}
+body{background:#FBF9F5;color:#131315;font-family:Georgia,'Times New Roman',serif;
+ font-size:18px;line-height:1.7;-webkit-font-smoothing:antialiased}
+a{color:inherit} .wrap{max-width:1180px;margin:0 auto;padding:0 32px}
+.narrow{max-width:760px;margin:0 auto}
+header{position:sticky;top:0;z-index:50;background:rgba(19,19,21,.96);
+ backdrop-filter:blur(8px);border-bottom:1px solid #2C2A28}
+.bar{display:flex;align-items:center;justify-content:space-between;height:86px}
+.brand{display:flex;align-items:center;gap:14px;text-decoration:none;color:#F4EFE6}
+.brand img{width:48px;height:48px;display:block}
+.brand b{font-family:Helvetica,Arial,sans-serif;font-size:15px;letter-spacing:.18em;
+ text-transform:uppercase;font-weight:700}
+.brand b i{font-style:normal;text-transform:none}
+nav ul{display:flex;gap:30px;list-style:none;align-items:center}
+nav a{font-family:Helvetica,Arial,sans-serif;font-size:12.5px;letter-spacing:.16em;
+ text-transform:uppercase;text-decoration:none;color:#A9A296;padding-bottom:3px;
+ border-bottom:1px solid transparent;transition:color .18s,border-color .18s}
+nav a:hover,nav a.on{color:#F4EFE6;border-color:#C6A670}
+nav a.cta{background:#C6A670;color:#131315;padding:12px 22px;border:0;letter-spacing:.14em}
+nav a.cta:hover{background:#F4EFE6}
+.menu{display:none;font-size:24px;background:none;border:0;cursor:pointer;color:#F4EFE6}
+.hero{position:relative;background:#1E1D1C;color:#F4EFE6;min-height:76vh;display:flex;
+ align-items:center;background-size:cover;background-position:center}
+.hero .wrap{padding:100px 32px;position:relative;z-index:2}
+.hero.dim::before{content:"";position:absolute;inset:0;
+ background:linear-gradient(100deg,rgba(15,14,13,.85) 36%,rgba(15,14,13,.45) 78%,rgba(15,14,13,.6))}
+.hero h1{font-size:clamp(33px,4.5vw,60px);line-height:1.16;font-weight:400;max-width:18ch}
+.hero p{margin-top:26px;max-width:56ch;font-size:20px;color:#EDE7DA}
+.kick{font-family:Helvetica,Arial,sans-serif;font-size:12px;letter-spacing:.28em;
+ text-transform:uppercase;color:#C6A670;margin-bottom:22px}
+.rule{width:88px;height:2px;background:#C6A670;margin:30px 0}
+.btn{display:inline-block;font-family:Helvetica,Arial,sans-serif;font-size:12.5px;
+ letter-spacing:.16em;text-transform:uppercase;text-decoration:none;padding:17px 34px;
+ background:#C6A670;color:#131315;transition:background .18s;border:0;cursor:pointer}
+.btn:hover{background:#F4EFE6}
+.btn.ghost{background:transparent;color:#F4EFE6;box-shadow:inset 0 0 0 1px rgba(244,239,230,.5)}
+.btn.ghost:hover{background:#F4EFE6;color:#131315;box-shadow:none}
+.btn.dark{background:#131315;color:#F4EFE6} .btn.dark:hover{background:#C6A670;color:#131315}
+section{padding:104px 0} section.tight{padding:70px 0}
+.eyebrow{font-family:Helvetica,Arial,sans-serif;font-size:12px;letter-spacing:.26em;
+ text-transform:uppercase;color:#8A8378;margin-bottom:18px}
+h2{font-size:clamp(27px,3vw,40px);line-height:1.24;font-weight:400;max-width:22ch}
+h3{font-family:Helvetica,Arial,sans-serif;font-size:15px;letter-spacing:.13em;
+ text-transform:uppercase;font-weight:700;margin-bottom:12px}
+.lede{font-size:21px;line-height:1.62;max-width:60ch;color:#3A362F}
+p+p{margin-top:18px}
+.ph{overflow:hidden;background:#E8E2D6;border:1px solid #DED8CC}
+.ph img{width:100%;height:100%;object-fit:cover;display:block}
+.ph.tall{aspect-ratio:3/4} .ph.wide{aspect-ratio:16/9} .ph.sq{aspect-ratio:1/1}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:44px;margin-top:56px}
+.steps .n{font-family:Helvetica,Arial,sans-serif;font-size:13px;letter-spacing:.2em;
+ color:#C6A670;display:block;margin-bottom:14px}
+.steps p{font-size:17px;color:#3A362F}
+.band{background:#1E1D1C;color:#F4EFE6;text-align:center;position:relative;overflow:hidden;
+ background-size:cover;background-position:center}
+.band.dim::before{content:"";position:absolute;inset:0;background:rgba(15,14,13,.78)}
+.band .wrap{position:relative;z-index:2}
+.band h2{margin:0 auto;max-width:26ch} .band p{color:#E4DDD0;max-width:58ch;margin:20px auto 0}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.stack>*+*{margin-top:22px}
+.feat{display:grid;grid-template-columns:repeat(3,1fr);gap:50px 44px;margin-top:56px}
+.feat.two{grid-template-columns:repeat(2,1fr);gap:52px}
+.feat p{font-size:17px;color:#3A362F}
+.isnot{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid #DED8CC;margin-top:50px}
+.isnot>div{padding:44px 40px}
+.isnot>div:first-child{background:#F4EFE6;border-right:1px solid #DED8CC}
+.isnot ul{list-style:none;margin-top:22px}
+.isnot li{padding:10px 0 10px 28px;position:relative;font-size:17px}
+.isnot li::before{content:"";position:absolute;left:0;top:19px;width:11px;height:11px;background:#C6A670}
+.isnot .no li::before{background:#DED8CC}
+.card{border:1px solid #DED8CC;background:#fff}
+.card .body{padding:36px 38px}
+.note{background:#F4EFE6;border-left:3px solid #C6A670;padding:26px 30px;margin-top:44px}
+.note p{font-size:15.5px;line-height:1.85;color:#3A362F}
+form.c{margin-top:44px;display:grid;grid-template-columns:1fr 1fr;gap:22px}
+form.c label{font-family:Helvetica,Arial,sans-serif;font-size:11.5px;letter-spacing:.16em;
+ text-transform:uppercase;color:#8A8378;display:block;margin-bottom:9px}
+form.c input,form.c select,form.c textarea{width:100%;padding:14px 16px;border:1px solid #DED8CC;
+ background:#fff;font-family:Georgia,serif;font-size:16.5px;color:#131315}
+form.c .full{grid-column:1/-1}
+footer{background:#131315;color:#A9A296;padding:72px 0 44px;
+ font-family:Helvetica,Arial,sans-serif;font-size:13.5px}
+footer a{color:#F4EFE6;text-decoration:none} footer a:hover{color:#C6A670}
+.fgrid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:44px}
+.fbrand{display:flex;align-items:center;gap:14px;margin-bottom:18px}
+.fbrand img{width:52px;height:52px}
+.fbrand b{color:#F4EFE6;font-size:14px;letter-spacing:.18em;text-transform:uppercase}
+.flist{list-style:none} .flist li{margin-top:11px}
+.fh{color:#F4EFE6;letter-spacing:.16em;font-size:11.5px;text-transform:uppercase}
+.fbot{margin-top:52px;padding-top:24px;border-top:1px solid #2C2A28;display:flex;
+ justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:12px;color:#7C766C}
+@media(max-width:900px){
+ .split,.feat,.feat.two,.fgrid,.steps,.isnot,form.c{grid-template-columns:1fr;gap:34px}
+ .isnot>div:first-child{border-right:0;border-bottom:1px solid #DED8CC}
+ nav ul{display:none} .menu{display:block} section{padding:70px 0}
+}</style></head><body>
+<header><div class="wrap bar">
+<a class="brand" href="index.html"><img src="assets/seal.png" alt="">
+<b>Project <i>i61</i></b></a>
+<nav><ul><li><a href="index.html">Home</a></li><li><a href="mission.html">Mission</a></li><li><a href="projects.html">Projects</a></li><li><a href="connect.html" class="cta">Connect</a></li></ul></nav><button class="menu" aria-label="Menu">&#9776;</button>
+</div></header>
+
+<div class="hero dim" style="min-height:52vh;background-image:url('assets/stock/table.jpg')"><div class="wrap">
+<div class="kick">Connect</div>
+<h1 style="font-size:clamp(30px,3.8vw,50px)">Start the conversation.</h1>
+<p>Builders, partners, and people who want to help lift — this is the front door.</p>
+</div></div>
+
+<section><div class="wrap narrow">
+<div class="eyebrow">Write to us</div>
+<h2>Tell us who you are and what you are building.</h2>
+<form class="c" action="mailto:hello@projecti61.org" method="get">
+<div><label for="n">Name</label><input id="n" name="name" required></div>
+<div><label for="e">Email</label><input id="e" name="email" type="email" required></div>
+<div class="full"><label for="w">I am&hellip;</label><select id="w" name="who">
+<option>Building something local and want to talk</option>
+<option>Interested in partnering or serving</option>
+<option>Interested in giving</option>
+<option>Praying for the work and want updates</option>
+<option>Something else</option>
+</select></div>
+<div class="full"><label for="m">The work, in your own words</label>
+<textarea id="m" name="notes" rows="6"></textarea></div>
+<div class="full"><button class="btn dark" type="submit">Send</button></div>
+</form>
+<div class="note"><p><b>Before launch:</b> wire the form to a real endpoint and stand up the
+email — <i>hello@projecti61.org is a placeholder and the domain is not yet registered</i>. On
+giving: until the federal determination letter is in hand, this site must not describe Project
+i61 as a 501(c)(3) or any gift as tax-deductible. Route interested givers to a conversation, not
+a checkout.</p></div>
+</div></section>
+
+<section class="band"><div class="wrap">
+<h2>See the first work.</h2>
+<p>Shiloh Collective is the best introduction to what coming alongside actually looks like.</p>
+<div style="margin-top:34px"><a class="btn" href="../shiloh/index.html">Visit Shiloh Collective</a></div>
+</div></section>
+
+<footer><div class="wrap"><div class="fgrid">
+<div><div class="fbrand"><img src="assets/seal.png" alt=""><b>Project i61</b></div>
+<p style="max-width:42ch;line-height:1.8">An equipping mechanism for small, strong local
+initiatives — built on relationships, not programmes. Organizing as a nonprofit in South
+Carolina.</p></div>
+<div><b class="fh">Pages</b><ul class="flist"><li><a href="index.html">Home</a></li><li><a href="mission.html">Mission</a></li><li><a href="projects.html">Projects</a></li><li><a href="connect.html">Connect</a></li></ul></div>
+<div><b class="fh">First project</b><ul class="flist">
+<li><a href="../shiloh/index.html">Shiloh Collective</a></li>
+<li>Dawsonville, Georgia</li></ul></div>
+</div><div class="fbot">
+<span>&copy; 2026 Project i61 &middot;
+<a href="assets/stock/CREDITS.md" style="color:#7C766C">temporary photo credits</a></span>
+<span style="letter-spacing:.2em;text-transform:uppercase;color:#C6A670">Built to Lift</span></div>
+</div></footer></body></html>
