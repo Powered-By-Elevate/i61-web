@@ -485,7 +485,7 @@ if(btn&&navEl){
  addEventListener('keydown',e=>{if(e.key==='Escape')set(false)});
  matchMedia('(min-width:921px)').addEventListener('change',e=>{if(e.matches)set(false)});
 }
-</script>
+
 (function(){
   var lb=document.querySelector('.lb'); if(!lb) return;
   var v=lb.querySelector('video');
@@ -501,4 +501,5 @@ if(btn&&navEl){
   lb.querySelector('.x').addEventListener('click',close);
   document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&lb.classList.contains('on')) close(); });
 })();
+</script>
 </body></html>
