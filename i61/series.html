@@ -263,6 +263,16 @@ form.big .full{grid-column:1/-1}
  .vgrid{grid-template-columns:repeat(2,1fr)}
 }
 
+/* A giving route that is not live yet. Deliberately loud: dashed edge, a chip, and
+   a dead button rather than a link, so a placeholder cannot be shipped by accident. */
+.dcard.pending{border:2px dashed #B9873C66;box-shadow:none;position:relative}
+.dcard.pending .val{color:__STONE__;opacity:.75}
+.dcard .pchip{position:absolute;top:12px;right:12px;background:#B9873C1E;color:#B9873C;
+ font-size:10px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:5px 10px;
+ border-radius:20px}
+.btn.dead{background:__STONE__33;color:__STONE__;box-shadow:none;cursor:not-allowed;
+ pointer-events:none}
+
 /* ---------- footer ---------- */
 footer{background:#241E15;color:#FFFFFFB0;padding:90px 0 50px;text-align:center}
 footer .seal{width:110px;height:110px;margin:0 auto 26px;display:block;
