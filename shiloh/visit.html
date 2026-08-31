@@ -163,6 +163,9 @@ p+p{margin-top:18px}
 .vid{position:relative;max-width:1120px;margin:0 auto;border-radius:20px;overflow:hidden;
  box-shadow:0 24px 70px rgba(0,0,0,.22);background:#000}
 .vid video{width:100%;display:block;aspect-ratio:16/9}
+/* the intro is a phone-shot 9:16 talking head - full width would be enormous */
+.vid.portrait{max-width:392px}
+.vid.portrait video{aspect-ratio:9/16}
 .vid-note{text-align:center;margin-top:18px;font-size:14px;color:__STONE__;letter-spacing:.04em}
 
 /* ---------- donate block ---------- */
@@ -248,11 +251,6 @@ footer .fbot a{color:#FFFFFF80;text-decoration:none}
 .solo .cap h3{font-size:clamp(22px,2.4vw,34px);margin:0}
 .solo .cap p{margin-top:8px;font-size:16px;opacity:.9;max-width:52ch}
 /* caption chip that rides a tile */
-.ph .tag{position:absolute;left:14px;bottom:14px;z-index:2;background:rgba(255,255,255,.94);
- color:#2E3226;font-family:'Jost',sans-serif;font-weight:600;font-size:11px;letter-spacing:.14em;
- text-transform:uppercase;padding:7px 13px;border-radius:20px;opacity:0;transform:translateY(8px);
- transition:opacity .35s,transform .35s}
-.ph:hover .tag{opacity:1;transform:none}
 @media(max-width:900px){
  .mosaic,.quad,.band5{grid-template-columns:repeat(2,1fr)}
  .tall3{grid-template-columns:repeat(2,1fr)}
@@ -339,7 +337,7 @@ footer .fbot a{color:#FFFFFF80;text-decoration:none}
 <p class="sub">The North Georgia foothills — an easy drive up GA-400, close enough to the
 mountains that your guests can make a weekend of it.</p></div></div>
 
-<div class="gal-wrap"><div class="tall3 rv"><div class="ph "><img src="assets/renders/hall-wide.jpg" alt="The main hall, chairs set, daylight through the glass wall" loading="lazy"><span class="tag">The main hall</span></div><div class="ph "><img src="assets/renders/door-open.jpg" alt="The big door open from outside, lamps lit within" loading="lazy"><span class="tag">The big door</span></div><div class="ph "><img src="assets/renders/kids-dusk.jpg" alt="Children running in the yard as the lights come on" loading="lazy"><span class="tag">Dusk outside</span></div></div></div>
+<div class="gal-wrap"><div class="tall3 rv"><div class="ph "><img src="assets/renders/hall-wide.jpg" alt="The main hall, chairs set, daylight through the glass wall" loading="lazy"></div><div class="ph "><img src="assets/renders/door-open.jpg" alt="The big door open from outside, lamps lit within" loading="lazy"></div><div class="ph "><img src="assets/renders/kids-dusk.jpg" alt="Children running in the yard as the lights come on" loading="lazy"></div></div></div>
 
 <section class="on-cream"><div class="wrap split">
 <div>
@@ -374,7 +372,7 @@ local partners Jeff wants to send guests to, with links and logos.</div>
 </div></section>
 <div class="wave"><svg viewBox="0 0 1440 74" preserveAspectRatio="none"><path d="M0,30 C320,84 720,-14 1080,26 C1260,46 1380,40 1440,30 L1440,74 L0,74 Z" fill="#F5F2DE"/></svg></div>
 
-<div class="gal-wrap"><div class="band5 rv"><div class="ph "><img src="assets/renders/hall-high.jpg" alt="Looking down into the hall from near the ceiling" loading="lazy"><span class="tag">From above</span></div><div class="ph "><img src="assets/renders/framing.jpg" alt="Volunteers raising timber wall framing inside the shell" loading="lazy"><span class="tag">The build</span></div><div class="ph "><img src="assets/renders/setting-up.jpg" alt="Setting out the rows before an evening" loading="lazy"><span class="tag">Setting up</span></div><div class="ph "><img src="assets/renders/cohort.jpg" alt="A cohort outside the building, mid-conversation" loading="lazy"><span class="tag">The cohort</span></div><div class="ph "><img src="assets/renders/workshop.jpg" alt="Hands running a plane along a board at the bench" loading="lazy"><span class="tag">The bench</span></div></div></div>
+<div class="gal-wrap"><div class="band5 rv"><div class="ph "><img src="assets/renders/hall-high.jpg" alt="Looking down into the hall from near the ceiling" loading="lazy"></div><div class="ph "><img src="assets/renders/framing.jpg" alt="Volunteers raising timber wall framing inside the shell" loading="lazy"></div><div class="ph "><img src="assets/renders/setting-up.jpg" alt="Setting out the rows before an evening" loading="lazy"></div><div class="ph "><img src="assets/renders/cohort.jpg" alt="A cohort outside the building, mid-conversation" loading="lazy"></div><div class="ph "><img src="assets/renders/workshop.jpg" alt="Hands running a plane along a board at the bench" loading="lazy"></div></div></div>
 
 <div class="solo rv"><img src="assets/renders/hall-empty.jpg" alt="Evening on site" loading="lazy"><div class="cap"><h3 class="d">Come at dusk</h3><p>The lights go on and the doors open — it makes the argument better than we can.</p></div></div>
 
