@@ -275,6 +275,25 @@ form.big .full{grid-column:1/-1}
 .btn.dead{background:__STONE__33;color:__STONE__;box-shadow:none;cursor:not-allowed;
  pointer-events:none}
 
+
+/* ---------- partner / connection cards ---------- */
+.plinks{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:52px}
+.plink{display:block;text-decoration:none;background:#fff;color:#2E3226;border-radius:18px;
+ overflow:hidden;box-shadow:0 10px 40px rgba(0,0,0,.09);
+ transition:transform .3s,box-shadow .3s}
+.plink:hover{transform:translateY(-6px);box-shadow:0 22px 58px rgba(0,0,0,.15)}
+.plink .shot{aspect-ratio:3/2;overflow:hidden}
+.plink .shot img{width:100%;height:100%;object-fit:cover;display:block;
+ transition:transform .7s cubic-bezier(.2,.6,.2,1)}
+.plink:hover .shot img{transform:scale(1.05)}
+.plink .body{padding:26px 26px 28px;text-align:left}
+.plink h3{font-size:20px;margin-bottom:8px}
+.plink p{font-size:15.5px;line-height:1.6;margin:0}
+.plink .go{display:inline-flex;align-items:center;gap:7px;margin-top:16px;color:#F05A24;
+ font-weight:600;font-size:14px;letter-spacing:.04em}
+.plink:hover .go{text-decoration:underline}
+@media(max-width:900px){.plinks{grid-template-columns:1fr}}
+
 /* ---------- footer ---------- */
 footer{background:#3A4030;color:#FFFFFFB0;padding:90px 0 50px;text-align:center}
 footer .seal{width:110px;height:110px;margin:0 auto 26px;display:block;
@@ -397,7 +416,7 @@ footer .fbot a{color:#FFFFFF80;text-decoration:none}
 </style></head><body>
 <header><div class="bar">
 <a class="brand" href="index.html"><img src="assets/shiloh-seal.png" alt=""><b>Shiloh Collective</b></a>
-<nav><ul><li><a class="home" href="../index.html">Built to Lift</a></li><li><a href="index.html">Home</a></li><li><a href="mission.html">Mission</a></li><li><a href="gather.html">Gather</a></li><li><a href="build.html" class="on">The Build</a></li><li><a href="visit.html">Visit</a></li><li><a href="give.html">Give</a></li><li><a href="book.html" class="cta">Book Now</a></li></ul></nav><button class="menu" aria-label="Menu">&#9776;</button>
+<nav><ul><li><a class="home" href="../index.html">&larr; Back</a></li><li><a href="index.html">Home</a></li><li><a href="mission.html">Mission</a></li><li><a href="gather.html">Gather</a></li><li><a href="build.html" class="on">The Build</a></li><li><a href="visit.html">Visit</a></li><li><a href="give.html">Give</a></li><li><a href="book.html" class="cta">Book Now</a></li></ul></nav><button class="menu" aria-label="Menu">&#9776;</button>
 </div></header>
 
 <div class="hero short"><div class="bg" style="background-image:url('assets/renders/approach.jpg')"></div>
@@ -437,7 +456,7 @@ Phase</a></div>
 <img class="seal" src="assets/shiloh-seal.png" alt="">
 <div class="btl">Built to Lift</div>
 <div class="fnav"><a href="index.html">Home</a><a href="mission.html">Mission</a><a href="gather.html">Gather</a><a href="build.html">The Build</a><a href="visit.html">Visit</a><a href="give.html">Give</a><a href="book.html">Book Now</a>
-<a href="../i61/index.html">Project i61</a><a href="../index.html">Family Home</a></div>
+<a href="../i61/index.html">Project i61</a><a href="../index.html">&larr; Back</a></div>
 <div class="addr">PO Box 277, Dawsonville, GA 30534 &nbsp;·&nbsp;
 <a href="tel:+16782766486" style="color:inherit">(678) 276-6486</a></div>
 <div class="fbot"><span>&copy; 2026 Shiloh Collective · Transforming Truth Ministries</span>
