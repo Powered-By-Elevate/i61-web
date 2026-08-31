@@ -278,7 +278,16 @@ form.big .full{grid-column:1/-1}
 
 /* ---------- partner / connection cards ---------- */
 .plinks{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:52px}
-.plinks.four{grid-template-columns:repeat(4,1fr);gap:22px}
+.plinks.four{grid-template-columns:repeat(4,1fr);gap:26px;
+ /* escape the centred .wrap so the row runs margin to margin */
+ width:100vw;max-width:100vw;margin-left:calc(50% - 50vw);
+ padding:0 clamp(22px,3.5vw,64px);margin-top:60px}
+.plinks.four .plink{border-radius:22px}
+.plinks.four .shot{aspect-ratio:4/3}
+.plinks.four .body{padding:32px 32px 34px}
+.plinks.four h3{font-size:25px;margin-bottom:12px}
+.plinks.four p{font-size:16.5px;line-height:1.62}
+.plinks.four .body .btn{padding:15px 30px;font-size:14px}
 @media(max-width:1180px){.plinks.four{grid-template-columns:repeat(2,1fr)}}
 .plink{display:flex;flex-direction:column;text-decoration:none;background:#fff;color:#2E3226;border-radius:18px;
  overflow:hidden;box-shadow:0 10px 40px rgba(0,0,0,.09);
