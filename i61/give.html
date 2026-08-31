@@ -278,6 +278,8 @@ form.big .full{grid-column:1/-1}
 
 /* ---------- partner / connection cards ---------- */
 .plinks{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;margin-top:52px}
+.plinks.four{grid-template-columns:repeat(4,1fr);gap:22px}
+@media(max-width:1180px){.plinks.four{grid-template-columns:repeat(2,1fr)}}
 .plink{display:block;text-decoration:none;background:#fff;color:#2A241B;border-radius:18px;
  overflow:hidden;box-shadow:0 10px 40px rgba(0,0,0,.09);
  transition:transform .3s,box-shadow .3s}
