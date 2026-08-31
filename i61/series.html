@@ -251,8 +251,10 @@ form.big .full{grid-column:1/-1}
 .lb{position:fixed;inset:0;z-index:200;background:rgba(12,10,8,.93);display:none;
  align-items:center;justify-content:center;padding:28px}
 .lb.on{display:flex}
-.lb video{max-height:86vh;max-width:min(92vw,440px);border-radius:16px;display:block;
- background:#000;box-shadow:0 30px 90px rgba(0,0,0,.6)}
+/* width/height auto plus object-fit:contain means the element can only ever be
+   letterboxed, never stretched or cropped, whatever ratio the file turns out to be. */
+.lb video{width:auto;height:auto;max-width:min(92vw,440px);max-height:86vh;object-fit:contain;
+ border-radius:16px;display:block;background:#000;box-shadow:0 30px 90px rgba(0,0,0,.6)}
 .lb .x{position:absolute;top:22px;right:26px;width:46px;height:46px;border-radius:50%;border:0;
  background:rgba(255,255,255,.14);color:#fff;font-size:24px;cursor:pointer;line-height:1}
 .lb .x:hover{background:rgba(255,255,255,.26)}
