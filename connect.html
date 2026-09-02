@@ -391,6 +391,13 @@ footer .fbot a{color:#FFFFFF80;text-decoration:none}
 @media(max-width:900px){
  .mosaic,.quad,.band5{grid-template-columns:repeat(2,1fr)}
  .tall3{grid-template-columns:repeat(2,1fr)}
+ /* An odd number of tiles in a two-column grid strands the last one and leaves a
+    hole beside it - tall3 has three, band5 has five. Let a stranded last tile span
+    the row, and give it a landscape ratio so it reads as a band rather than a
+    giant portrait. quad has four and is deliberately not matched. */
+ .tall3>*:last-child:nth-child(odd),
+ .band5>*:last-child:nth-child(odd),
+ .quad>*:last-child:nth-child(odd){grid-column:1/-1;aspect-ratio:16/10}
  .wide2,.duo{grid-template-columns:1fr}
  .mosaic .ph.hero2,.mosaic .ph.wide{grid-column:span 2;grid-row:auto;aspect-ratio:16/10}
  .solo{height:56vh}
