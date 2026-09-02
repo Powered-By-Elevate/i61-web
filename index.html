@@ -293,6 +293,19 @@ form.big .full{grid-column:1/-1}
 .plinks.four p{font-size:16.5px;line-height:1.62}
 .plinks.four .body .btn{padding:15px 30px;font-size:14px}
 @media(max-width:1180px){.plinks.four{grid-template-columns:repeat(2,1fr)}}
+/* Two columns on a 390px phone leaves ~96px of text per card, which wraps to two
+   words a line. One column below 760, and the generous desktop padding comes back
+   in too - 32px a side is a twelfth of the screen on a handset. */
+@media(max-width:760px){
+ .plinks.four{grid-template-columns:1fr;gap:20px;padding:0 18px}
+ .plinks.four .body{padding:24px 22px 26px}
+ .plinks.four h3{font-size:22px}
+ .plinks.four .shot{aspect-ratio:16/10}
+ .plinks.four .body .btn{width:100%;text-align:center;padding:15px 18px}
+ .donate.big{padding:0 18px;gap:18px}
+ .donate.big .dcard{padding:32px 24px 30px}
+ .donate.big .dcard .val{font-size:24px}
+}
 .plink{display:flex;flex-direction:column;text-decoration:none;background:#fff;color:#2A241B;border-radius:18px;
  overflow:hidden;box-shadow:0 10px 40px rgba(0,0,0,.09);
  transition:transform .3s,box-shadow .3s}
@@ -326,8 +339,10 @@ form.big .full{grid-column:1/-1}
 footer{background:#241E15;color:#FFFFFFB0;padding:90px 0 50px;text-align:center}
 footer .seal{width:110px;height:110px;margin:0 auto 26px;display:block;
  filter:drop-shadow(0 4px 18px rgba(0,0,0,.4))}
-footer .fnav{display:flex;gap:26px;justify-content:center;flex-wrap:wrap;margin:26px 0 34px}
-footer .fnav a{color:#FBF7EE;text-decoration:none;font-weight:500;font-size:15px}
+footer .fnav{display:flex;gap:6px 14px;justify-content:center;flex-wrap:wrap;margin:22px 0 30px}
+footer .fnav a{color:#FBF7EE;text-decoration:none;font-weight:500;font-size:15px;
+ display:inline-flex;align-items:center;justify-content:center;
+ min-height:44px;min-width:44px;padding:0 10px}
 footer .fnav a:hover{color:#B9873C}
 footer .addr{font-size:15px;line-height:2}
 footer .fbot{margin-top:44px;padding-top:26px;border-top:1px solid #FFFFFF1E;font-size:12.5px;
@@ -534,7 +549,7 @@ to its town.</p></div>
 <section class="on-primary"><div class="wrap center">
 <div class="kick rv">The family</div>
 <h2 class="rv">Four works today. Room at the table for the next.</h2>
-<div class="plinks four"><div class="plink rv"><span class="shot"><img src="assets/renders/hall-set.jpg" alt="Shiloh Collective" loading="lazy"></span><span class="body"><h3>Shiloh Collective</h3><p>An equipping centre for young adults in Dawsonville, Georgia, built by hand inside a 2,800 square foot warehouse.</p><a class="btn onlight" href="shiloh/index.html">Visit Shiloh Collective &rarr;</a></span></div><div class="plink rv"><span class="shot"><img src="assets/partners/aia.jpg" alt="American Innovation Academies" loading="lazy"></span><span class="body"><h3>American Innovation Academies</h3><p>A public charter school taking shape in Woodruff, South Carolina — trades, labs and a movement lab under one roof.</p><a class="btn onlight" href="https://americaninnovationacademies.com" target="_blank" rel="noopener noreferrer">Visit AIA &#8599;</a></span></div><div class="plink rv"><span class="shot"><img src="assets/partners/wcog.jpg" alt="Woodruff Church of God" loading="lazy"></span><span class="body"><h3>Woodruff Church of God</h3><p>The Woodruff congregation whose campus the academy is being built on.</p><a class="btn onlight" href="https://woodruffcog.org" target="_blank" rel="noopener noreferrer">Visit the Church &#8599;</a></span></div><div class="plink rv"><span class="shot"><img src="assets/partners/stillwater.jpg" alt="Still Water Pastor Retreat" loading="lazy"></span><span class="body"><h3>Still Water Pastor Retreat</h3><p>A quiet place in the pines for pastors and their spouses to rest.</p><a class="btn onlight" href="https://stillwaterpastorretreat.com" target="_blank" rel="noopener noreferrer">Visit Still Water &#8599;</a></span></div></div>
+<div class="plinks four"><div class="plink rv"><span class="shot"><img src="assets/renders/hall-set.jpg" alt="Shiloh Collective" loading="lazy"></span><span class="body"><h3>Shiloh Collective</h3><p>An equipping centre for young adults in Dawsonville, Georgia, built by hand inside a 2,800 square foot warehouse.</p><a class="btn onlight" href="shiloh/index.html">Visit Shiloh Collective &rarr;</a></span></div><div class="plink rv"><span class="shot"><img src="assets/partners/aia.jpg" alt="American Innovation Academies" loading="lazy"></span><span class="body"><h3>American Innovation Academies</h3><p>A public charter school taking shape in Woodruff, South Carolina — trades, labs and a movement lab under one roof.</p><a class="btn onlight" href="https://americaninnovationacademies.com" target="_blank" rel="noopener noreferrer">Visit AIA &#8599;&#xFE0E;</a></span></div><div class="plink rv"><span class="shot"><img src="assets/partners/wcog.jpg" alt="Woodruff Church of God" loading="lazy"></span><span class="body"><h3>Woodruff Church of God</h3><p>The Woodruff congregation whose campus the academy is being built on.</p><a class="btn onlight" href="https://woodruffcog.org" target="_blank" rel="noopener noreferrer">Visit the Church &#8599;&#xFE0E;</a></span></div><div class="plink rv"><span class="shot"><img src="assets/partners/stillwater.jpg" alt="Still Water Pastor Retreat" loading="lazy"></span><span class="body"><h3>Still Water Pastor Retreat</h3><p>A quiet place in the pines for pastors and their spouses to rest.</p><a class="btn onlight" href="https://stillwaterpastorretreat.com" target="_blank" rel="noopener noreferrer">Visit Still Water &#8599;&#xFE0E;</a></span></div></div>
 </div></section>
 
 <div class="fullph" style="background-image:url('assets/own/morning.jpg');min-height:58vh"><div class="inner rv">
