@@ -264,8 +264,9 @@ form.big .full{grid-column:1/-1}
 .lb .x:hover{background:rgba(255,255,255,.26)}
 @media(max-width:900px){
  .vrow{grid-template-columns:repeat(2,1fr)}
- .vcta{grid-column:1/-1;aspect-ratio:auto;flex-direction:row;justify-content:space-between;
-  padding:22px 26px}
+ /* going horizontal here wrapped both labels onto two lines each; keep the column,
+    just let it size to content instead of holding the 9:16 tile ratio */
+ .vcta{grid-column:1/-1;aspect-ratio:auto;flex-direction:column;gap:12px;padding:28px 26px}
  .vgrid{grid-template-columns:repeat(2,1fr)}
 }
 
@@ -297,6 +298,12 @@ form.big .full{grid-column:1/-1}
    words a line. One column below 760, and the generous desktop padding comes back
    in too - 32px a side is a twelfth of the screen on a handset. */
 @media(max-width:760px){
+ /* Button pairs are two inline-blocks, each sized to its own text, with an inline
+    margin-left on the second. Side by side that reads fine; wrapped onto two lines
+    it puts two different-width buttons on two different axes. Stack them full-width. */
+ .btn{display:block;width:100%;max-width:340px;margin-left:auto!important;margin-right:auto;
+  text-align:center;box-sizing:border-box}
+ .btn+.btn{margin-top:12px}
  .plinks.four{grid-template-columns:1fr;gap:20px;padding:0 18px}
  .plinks.four .body{padding:24px 22px 26px}
  .plinks.four h3{font-size:22px}
